@@ -35,17 +35,7 @@
             color: rgb(44, 82, 130);
             font-weight: 600;
         }
-        /* main {
-            background-color: white;
-            margin-left: 200px;
-            margin-right: 200px;
-            padding-left: 70px;
-            padding-right: 70px;
-            padding-top: 40px;
-            padding-bottom: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        } */
+        
         .QuestionNum {
             font-size: 20px;
             color: rgb(58, 58, 58);
@@ -88,13 +78,6 @@
             background-color: rgb(0, 0, 202);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        /* .yello-circle:active{
-            cursor: pointer;
-            transform: scale(1.1);
-            transition: all 0.3s ease;
-            background-color: rgb(0, 0, 202);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        } */
         .TheAnswers{
             font-size: 25px;
             color: rgb(0, 0, 27);
@@ -111,7 +94,7 @@
             font-size: 30px;
             border-radius: 15px;
             cursor: pointer;
-            margin-top: 32px;
+            margin-top: 40px;
             
         }
         .nextButton:hover{
@@ -129,7 +112,4 @@
             padding-bottom: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        footer{
-            margin-top: -90px;
         }
