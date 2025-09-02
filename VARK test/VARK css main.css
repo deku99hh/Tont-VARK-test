@@ -59,7 +59,8 @@
             display: flex;
             align-items: center;
         }
-        .yello-circle{
+
+        /* .yello-circle{
             border-radius: 100px;
             background-color: rgb(255, 202, 28);
             width: 40px;
@@ -69,15 +70,17 @@
             margin-left: 10px;
             margin-bottom: 20px;
             margin-top: 18px;
-        }
+        } */
         /* the howl thing is 66px the circle is 44px  */
-        .yello-circle:hover{
+
+        /* .yello-circle:hover{
             cursor: pointer;
             transform: scale(1.1);
             transition: all 0.3s ease;
             background-color: rgb(0, 0, 202);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
+        } */
+
         .TheAnswers{
             font-size: 25px;
             color: rgb(0, 0, 27);
@@ -85,6 +88,7 @@
             letter-spacing: 1px;
             font-family: "Alexandria", sans-serif;
             vertical-align: middle;
+            
         }
         .nextButton{
             background-color: rgb(17, 38, 65);
@@ -101,7 +105,7 @@
             background-color: rgb(44, 82, 130);
             transition: all 0.3s;
         }
-        .QuestionBlook{
+        /* .QuestionBlook{
             margin-bottom: 90px;
             background-color: white;
             margin-left: 200px;
@@ -112,4 +116,70 @@
             padding-bottom: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        } */
+
+
+
+        /* 
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            border-radius: 50%;
+            background: rgb(255, 202, 28);
+            border: 3px solid #FFF;
+            box-shadow: 0 0 0 1px rgb(255, 202, 28);
+        } */
+
+
+        main{
+            margin-bottom: 90px;
+            background-color: white;
+            margin-left: 200px;
+            margin-right: 200px;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .custom-radio {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgb(255, 202, 28);
+            border: 3px solid rgb(255, 202, 28);
+            box-shadow: 0 0 0 1px rgb(255, 202, 28);
+            transition: background 0.2s ease-in-out;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            margin-top: 18px;
+            cursor: pointer;
+        }
+
+        input[type="radio"]:checked + .custom-radio {
+            background: rgb(0, 0, 202);
+        }
+
+        .answer-label:hover .custom-radio {
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+            background-color: rgb(0, 0, 202);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .answer-label {
+            vertical-align: middle;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center; /* This is the key to aligning the radio and the text */
+            cursor: pointer;
         }
