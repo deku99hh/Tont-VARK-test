@@ -36,13 +36,13 @@
             font-weight: 600;
         }
         
-        .QuestionNum {
+        .cetered-gray-text {
             font-size: 20px;
             color: rgb(58, 58, 58);
             margin-bottom: 32px;
             text-align: center;
         }
-        .Question {
+        .centered-H1 {
             font-size: 30px;
             color: rgb(0, 0, 27);
             margin-bottom: 32px;
@@ -183,3 +183,97 @@
             align-items: center; /* This is the key to aligning the radio and the text */
             cursor: pointer;
         }
+
+        .right-H1{
+
+            font-size: 30px;
+            color: rgb(0, 0, 27);
+            margin-bottom: 32px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-family: "Alexandria", sans-serif;
+            text-align: right;
+
+
+        }
+
+        .explainText{
+            font-size: 20px;
+            color: rgb(0, 0, 27);
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-family: "Alexandria", sans-serif;
+            vertical-align: middle;
+        }
+
+        .chimestry-dropdown{
+            padding: 20px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-color: black;
+            cursor: pointer;
+            height: auto;
+            width: 100%;
+            text-align: right;
+            font-size: 30px;
+            font-weight: 400px;
+            margin-bottom: 20px;
+        }
+        .chimestry-dropdown-text{
+            padding-top: 20px;
+            padding-right: 5px;
+            margin-top: 5px;
+            margin-right: 30px;
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+            border-right: 3px solid rgb(192, 192, 192);
+            font-size: 20px;
+            font-weight: 600px;
+        }
+        .chimestry-dropdown2{
+            margin-right: 20px;
+            margin-left: -20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-color: black;
+            cursor: pointer;
+            height: auto;
+            width: 90%;
+            text-align: right;
+            font-size: 30px;
+            font-weight: 400px;
+        }
+        .chimestry-dropdown-block{
+            display: none;
+        }
+        .cuming-soon{
+            display: inline;
+            height: 25px;
+            width: 25px;
+        }
+        .cuming-soon-text{
+            font-size: 20px;
+            display: none;
+        }
+        .cuming-soon:hover +.cuming-soon-text{
+            display: inline-block;
+        }
+
+
+
+
+
+        /* انا هعمل الاساات
+        حلا هتظبك الشكل والترانزيشان اكثر
+        صالح باك ايند */
+
+        /* الهابيت تراكار
+        الواجها الاساسية
+        الloge in , sign up 
+        about us والكلام ده
+        باقي الكلام */

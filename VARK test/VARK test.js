@@ -7,44 +7,98 @@ let Vcount = 0;
 let Acount = 0;
 let Rcount = 0;
 let Kcount = 0;
+let YourStyle;
 
 let selected = null;
 
-loadQustions();
+
+
 function loadQustions(){
 
     if (qustionNumber>10){
         qustionHTML = `
             <div class="QuestionBlook">
-                <p class="QuestionNum">Test Completed</p>
-                <p class="Question">Your Learning Style is:</p>
-                <div class="answers">
-                    <div class="answerBlock TheAnswers" style="text-align: center; font-size: 20px;">
-                    نسبة قابلية تعلمك بشكل بصري: ${Math.round(Vcount/11*100)}%
-                    </div>
-                    <div class="answerBlock TheAnswers" style="text-align: center; font-size: 20px;">
-                    نسبة قابلية تعلمك بشكل بصري: ${Math.round(Acount/11*100)}%
-                    </div>
-                    <div class="answerBlock TheAnswers" style="text-align: center; font-size: 20px;">
-                    نسبة قابلية تعلمك بالقراءة/الكتابة: ${Math.round(Rcount/11*100)}%
-                    </div>
-                    <div class="answerBlock TheAnswers" style="text-align: center; font-size: 20px;">
-                    نسبة قابلية تعلمك بشكل حركي: ${Math.round(Kcount/11*100)}%
-                    </div>
-                </div>
-                <div style="display: flex; justify-content: center;"><button class="nextButton" onclick="
-                location.reload()
-                ">Retake Test</button></div>
+                <p class="cetered-gray-text">Test Completed</p>
+                <p class="centered-H1">الاسلوب الامثل لك هو :${YourStyle}</p>
+
+                
+        <button class="chimestry-dropdown">الكيمياء</button>
+        <div class="chimestry-dropdown-block">
+
+            <button class="chimestry-dropdown2">
+            العناصر الانتقالية<img src="icons/lock-locked-icon.png" alt="cuming soon" class="cuming-soon"> <span class="cuming-soon-text">coming soon</span>
+            </button>
+            <button class="chimestry-dropdown2">
+            الكيمياء التحليلية<img src="icons/lock-locked-icon.png" alt="cuming soon" class="cuming-soon"> <span class="cuming-soon-text">coming soon</span>
+            </button>
+            <button class="chimestry-dropdown2">
+            الاتزان الكيميائي<img src="icons/lock-locked-icon.png" alt="cuming soon" class="cuming-soon"> <span class="cuming-soon-text">coming soon</span>
+            </button>
+            <button class="chimestry-dropdown2">
+            الكيمياء الكهربية</button>
+            <div class="chimestry-dropdown-text">
+            هخبلتاخبكلتاش نتايسبىت بنعالاليمن خهعلغشيقاتن
+
+            </div>
+            <button class="chimestry-dropdown2">
+            الكيمياء العضوية<img src="icons/lock-locked-icon.png" alt="cuming soon" class="cuming-soon"> <span class="cuming-soon-text">coming soon</span>
+            </button>
+
+
+        </div>
+
+        <button class="chimestry-dropdown">
+            الفيزياء <img src="icons/lock-locked-icon.png" alt="cuming soon" class="cuming-soon"> <span class="cuming-soon-text">coming soon</span>
+        </button>
+        
+        <button class="chimestry-dropdown">
+            الاحياء <img src="icons/lock-locked-icon.png" alt="cuming soon" class="cuming-soon"> <span class="cuming-soon-text">coming soon</span>
+        </button>
+        <button class="chimestry-dropdown">
+            الرياضيات<img src="icons/lock-locked-icon.png" alt="cuming soon" class="cuming-soon"> <span class="cuming-soon-text">coming soon</span>
+        </button>
+        <button class="chimestry-dropdown">
+            اللغة العربية<img src="icons/lock-locked-icon.png" alt="cuming soon" class="cuming-soon"> <span class="cuming-soon-text">coming soon</span>
+        </button>
+        <button class="chimestry-dropdown">
+            اللغة الانجليزية<img src="icons/lock-locked-icon.png" alt="cuming soon" class="cuming-soon"> <span class="cuming-soon-text">coming soon</span>
+        </button>
+        <button class="chimestry-dropdown">
+            الجيولوجيا<img src="icons/lock-locked-icon.png" alt="cuming soon" class="cuming-soon"> <span class="cuming-soon-text">coming soon</span>
+        </button>
+        
+
+
+
             </div>
         `;
+
         document.querySelector('main').innerHTML= qustionHTML;
+
+
+
+        const chimestryDropdownText = document.querySelector('.chimestry-dropdown-block');
+
+        document.querySelector('.chimestry-dropdown').addEventListener('click', () => {
+                if (chimestryDropdownText.style.display === 'none') {
+                    chimestryDropdownText.style.display = 'block';
+                } else {
+                    chimestryDropdownText.style.display = 'none';
+                }
+            }
+        );
+
+
+
+
+        
 
     }
     else {
         qustionHTML = `        
         <div class="QuestionBlook">
-                <p class="QuestionNum">Question ${qustionNumber + 1 } of 11</p>
-                <p class="Question">${VARKQuestions[qustionNumber].qustion}</p>
+                <p class="cetered-gray-text">Question ${qustionNumber + 1 } of 11</p>
+                <p class="centered-H1">${VARKQuestions[qustionNumber].qustion}</p>
                 <div class="answers">
                     <div class="answerBlock">
                         <label class="answer-label">
@@ -144,12 +198,43 @@ function loadQustions(){
                 }
                 console.log(Vcount, Acount, Rcount, Kcount);
      
-                qustionNumber=qustionNumber+1;           isAnswered = false;
+                qustionNumber=qustionNumber+1;
+                isAnswered = false;
                 loadQustions();
                 selected = null;
             } else {
                 alert("Please select an answer before proceeding.");
             }
+
+            if(Vcount >= Acount){
+                if(Vcount >= Rcount){
+                    if(Vcount >= Kcount){
+                        YourStyle = 'الاسلوب البصري';
+                    }
+                }
+            }
+            if(Acount >= Vcount){
+                if(Acount >= Rcount){
+                    if(Acount >= Kcount){
+                        YourStyle = 'الاسلوب السمعي';
+                    }
+                }
+            }
+            if(Rcount >= Vcount){
+                if(Rcount >= Acount){
+                    if(Rcount >= Kcount){
+                        YourStyle = 'الاسلوب القرائي/الكتابي';
+                    }
+                }
+            }
+            if(Kcount >= Vcount){
+                if(Kcount >= Acount){
+                    if(Kcount >= Rcount){
+                        YourStyle = 'الاسلوب الحركي ';
+                    }
+                }
+            }
+
                 });
 
 
